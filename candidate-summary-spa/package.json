@@ -1,0 +1,72 @@
+{
+	"name": "candidate-summary-spa",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"analyze": "npx vite-bundle-visualizer",
+		"start": "vite",
+		"start:nomocks": "VITE_MOCKS=false vite",
+		"build": "tsc && vite build",
+		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+		"preview": "vite preview",
+		"test": "vitest run --coverage --reporter default",
+		"test:coverage": "vitest run --coverage",
+		"test:watch": "vitest watch --coverage --reporter default",
+		"test:browser": "echo 'No browser tests to run.'",
+		"sonar": "npx sonar-scanner"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.11.4",
+		"@emotion/styled": "^11.11.5",
+		"@icims-design-system/i18next": "^2.14.0",
+		"@icims-design-system/mui-core": "^2.14.0",
+		"@icims-design-system/mui-lab": "^2.14.0",
+		"@mui/icons-material": "^5.15.18",
+		"@mui/lab": "^5.0.0-alpha.170",
+		"@mui/material": "^5.15.18",
+		"@mui/styles": "^5.15.18",
+		"@mui/system": "^5.15.18",
+		"@mui/utils": "^5.15.18",
+		"@mui/x-tree-view": "^6.17.0",
+		"@tanstack/react-query": "^5.37.1",
+		"@tanstack/react-query-devtools": "^5.37.1",
+		"ignite-advance-reject": "^3.3.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-markdown": "^9.0.1",
+		"react-router-dom": "^6.23.1",
+		"rooks": "^7.14.1"
+	},
+	"devDependencies": {
+		"@testing-library/dom": "^10.1.0",
+		"@testing-library/jest-dom": "^6.4.5",
+		"@testing-library/react": "^15.0.7",
+		"@testing-library/user-event": "^14.5.2",
+		"@types/css-mediaquery": "^0.1.4",
+		"@types/react": "^18.2.66",
+		"@types/react-dom": "^18.2.22",
+		"@typescript-eslint/eslint-plugin": "^7.2.0",
+		"@typescript-eslint/parser": "^7.2.0",
+		"@vitejs/plugin-react": "^4.2.1",
+		"@vitest/coverage-v8": "^1.6.0",
+		"css-mediaquery": "^0.1.2",
+		"eslint": "^8.57.0",
+		"eslint-plugin-react": "^7.34.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-refresh": "^0.4.6",
+		"jsdom": "^24.0.0",
+		"msw": "^2.3.0",
+		"typescript": "^5.2.2",
+		"undici": "^6.18.1",
+		"vite": "^5.2.0",
+		"vite-tsconfig-paths": "^4.3.2",
+		"vitest": "^1.6.0",
+		"vitest-sonar-reporter": "^2.0.0"
+	},
+	"msw": {
+		"workerDirectory": [
+			"public"
+		]
+	}
+}
